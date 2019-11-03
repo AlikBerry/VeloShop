@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <!-- Left-aligned media object -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+        <div style="margin-bottom: 10%">
+          <img src="{{ product.image.url }}" style="width: 650px; height: 450px;">
+          <h1>{{ product.heading }}</h1>
+          <p>Описание: {{ product.description }}</p> 
+          <p>Брэнд:  {{ product.brand }} </p> 
+          <p >Категория:  {{ product.category }}</p> 
+          <p >Цена:  {{ product.price }}</p>  
+          <p >Город:  {{ product.city }}</p> 
+          <p >Номер тел.:  {{ product.tel_number }} </p> 
+          <p >Соц. сети:  {{ product.link }} </p> 
+          <p >Пользователь:  {{ product.author }} </p> 
+          <p >Дата:  {{ product.create_date|date:'d.m.Y' }}</p>           
+        </div>
+    </div>
+      
+  </div>
+    
+</div>
+  
+
+  
+{% endblock %}
